@@ -24,7 +24,8 @@
       <div class="boxstyle">Welcome to Infinity Pizza!</div>
       <br/>
       <div class="boxstyle">Search something up:<br/><input onchange="searchresults()" id="search" placeholder="Something..."></div>
-      <div class="boxstyle" id="predicts"></div>
+      <br/>
+      <span class="boxstyle" id="predicts"></span>
     </center>
   </body>
   <script>
@@ -34,14 +35,14 @@
       // Short for predicts
       let preds = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
 
-      document.getElementById("predicts").innerHTML = ""
+      document.getElementById("predicts").innerText = ""
 
       console.log("---")
 
       if (!e.value.length == 0) {
         for (i in preds) {
           if (preds[i].includes(e.value)) {
-            document.getElementById("predicts").innerText =+ preds[i] + "<br/>"
+            document.getElementById("predicts").innerText =+ preds[i] + \n
             console.log(preds[i])
             }
         }
