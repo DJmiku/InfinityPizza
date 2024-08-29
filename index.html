@@ -35,14 +35,14 @@
       // Short for predicts
       let preds = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
 
-      document.getElementById("predicts").innerText = ""
+      document.getElementById("predicts").innerHTML = ""
 
       console.log("---")
 
       if (!e.value.length == 0) {
         for (i in preds) {
           if (preds[i].includes(e.value)) {
-            document.getElementById("predicts").innerText =+ preds[i] + \n
+            document.getElementById("predicts").innerHTML =+ preds[i] + '<br/>'
             console.log(preds[i])
             }
         }
