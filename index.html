@@ -42,7 +42,7 @@
         "cool websites"
       ]
 
-      document.getElementById("predicts").innerHTML = ""
+      document.getElementById("predicts").innerHTML = "You haven't typed in anything yet..."
 
       console.log("---")
 
@@ -50,12 +50,10 @@
         for (i in preds.length) {
           if (preds[i].includes(e.value.toLowerCase())) {
             
-            document.getElementById("predicts").style.display = "block"     
-            
-            document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>'
+            document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>';
             console.log(preds[i])
           } else {
-            document.getElementById("predicts").style.display = "none"     
+            document.getElementById("predicts").innerHTML = "You haven't typed in anything yet...";
           }
       }
     }
