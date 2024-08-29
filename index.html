@@ -36,11 +36,13 @@
 
       document.getElementById("predicts").innerHTML = ""
 
+      console.log("---")
+
       if (!e.value.length == 0) {
         for (i in preds) {
           if (preds[i].includes(e.value)) {
             document.getElementById("predicts").innerHTML =+ preds[i]
-            console.log(i)
+            console.log(preds[i])
             }
         }
       }
