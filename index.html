@@ -47,21 +47,20 @@
       console.log("---")
 
       if (!e.value.length == 0) {
-        document.getElementById("predicts").style.display = "block"
-      } else {
-        document.getElementById("predicts").style.display = "none"
-      }
-
-      if (!e.value.length == 0) {
         for (i in preds.length) {
           if (preds[i].includes(e.value.toLowerCase())) {
+            
+            document.getElementById("predicts").style.display = "block"     
+            
             document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>'
             console.log(preds[i])
-            }
-        }
+          } else {
+            document.getElementById("predicts").style.display = "none"     
+          }
       }
-      
     }
+      
+  }
 
     searchresults()
   </script>
