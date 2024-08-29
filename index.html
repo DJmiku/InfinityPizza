@@ -41,7 +41,7 @@
       if (!e.value.length == 0) {
         for (i in preds) {
           if (preds[i].includes(e.value)) {
-            document.getElementById("predicts").innerHTML =+ preds[i]
+            document.getElementById("predicts").innerText =+ preds[i] + "<br/>"
             console.log(preds[i])
             }
         }
