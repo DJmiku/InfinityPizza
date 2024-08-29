@@ -33,7 +33,7 @@
       const e = document.getElementById('search');
 
       // Short for predicts
-      let preds = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
+      const preds = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
 
       document.getElementById("predicts").innerHTML = ""
 
@@ -42,7 +42,7 @@
       if (!e.value.length == 0) {
         for (i in preds) {
           if (preds[i].includes(e.value)) {
-            document.getElementById("predicts").innerHTML =+ preds[i] + '<br/>'
+            document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>'
             console.log(preds[i])
             }
         }
