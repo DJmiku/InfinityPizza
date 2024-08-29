@@ -29,14 +29,18 @@
   </body>
   <script>
     function searchresults() {
-      let e = document.getElementById('search');
+      const e = document.getElementById('search');
 
-      let predictions = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
+      // Short for predicts
+      let preds = ["what to do if squirrel is smiling", "how to solve a rubix cube", "tell me a funny joke", "what is skibidi toilet", "how to play chess"]
 
-      if (!e.length == 0) {
-        for (i in predictions) {
-          if (predictions[i].includes(e.value)) {
-            document.getElementById("predicts").innerHTML =+ predictions[i]
+      document.getElementById("predicts").innerHTML = ""
+
+      if (!e.value.length == 0) {
+        for (i in preds) {
+          if (preds[i].includes(e.value)) {
+            document.getElementById("predicts").innerHTML =+ preds[i]
+            console.log(i)
             }
         }
       }
