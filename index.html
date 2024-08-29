@@ -22,7 +22,6 @@
   <body>
     <center>
       <div class="boxstyle">Welcome to Infinity Pizza!</div>
-      <br/>
       <div class="boxstyle">Search something up:<br/><input onkeypress="searchresults()" id="search" placeholder="Something..."></div>
       <br/>
       <div class="boxstyle" id="predicts"></div>
@@ -46,6 +45,12 @@
       document.getElementById("predicts").innerHTML = ""
 
       console.log("---")
+
+      if (!e.value.length == 0) {
+        document.getElementById("predicts").style.display = "block"
+      } else {
+        document.getElementById("predicts").style.display = "none"
+      }
 
       if (!e.value.length == 0) {
         for (i in preds.length) {
