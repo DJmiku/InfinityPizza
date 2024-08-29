@@ -35,7 +35,7 @@
 
       if (!e.length == 0) {
         for (i in predictions) {
-          if (predictions[i].includes(e)) {
+          if (predictions[i].includes(e.value)) {
             document.getElementById("predicts").innerHTML =+ predictions[i]
             }
         }
