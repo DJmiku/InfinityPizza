@@ -40,7 +40,7 @@
       console.log("---")
 
       if (!e.value.length == 0) {
-        for (i in preds) {
+        for (i in preds.length) {
           if (preds[i].includes(e.value)) {
             document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>'
             console.log(preds[i])
