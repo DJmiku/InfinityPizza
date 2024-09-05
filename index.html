@@ -22,44 +22,7 @@
   <body>
     <center>
       <div class="boxstyle">Welcome to Infinity Pizza!</div>
-      <div class="boxstyle">Search something up:<br/><input onkeypress="searchresults()" id="search" placeholder="Something..."></div>
-      <br/>
-      <div class="boxstyle" id="predicts"></div>
+      <div class="boxstyle">You should signup!<br/><input id="username-infinitypizzaz" placeholder="MagicalLudwig21"></div>
     </center>
   </body>
-  <script>
-    function searchresults() {
-      const e = document.getElementById('search');
-
-      // Short for predicts
-      const preds = [
-        "what to do if squirrel is smiling",
-        "how to solve a rubix cube",
-        "tell me a funny joke",
-        "what is skibidi toilet",
-        "how to play chess",
-        "name one reason i should do my homework",
-        "cool websites"
-      ]
-
-      document.getElementById("predicts").innerHTML = "You haven't typed in anything yet..."
-
-      console.log("---")
-
-      if (!e.value.length == 0) {
-        for (i in preds.length) {
-          if (preds[i].includes(e.value.toLowerCase())) {
-            
-            document.getElementById("predicts").innerHTML = document.getElementById("predicts").innerHTML + preds[i] + '<br/>';
-            console.log(preds[i])
-          } else {
-            document.getElementById("predicts").innerHTML = "You haven't typed in anything yet...";
-          }
-      }
-    }
-      
-  }
-
-    searchresults()
-  </script>
 </html>
